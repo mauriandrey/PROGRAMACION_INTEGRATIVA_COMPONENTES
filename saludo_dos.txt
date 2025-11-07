@@ -1,2 +1,2 @@
 SEGUNDO ARCHIVO CREADO DESDE LA TERMINAL
-CON "touch <nombre_archivo>"
+CON "touch <nombre_archivo>"                            

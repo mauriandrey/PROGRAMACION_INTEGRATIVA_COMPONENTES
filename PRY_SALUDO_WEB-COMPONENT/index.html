@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        SALUDOS CON WEB COMPONENT
+    </title>
+</head>
+<body>
+    
+
+    <script>
+        class HolaMundo extends HTMLElement{
+            connectedCallback(){
+                this.innerHTML = 
+                `
+                <h1>Hola mundo desde programacion web components</h1>
+                <h2>Hola mundo desde programacion web components</h2>
+                <h3>Hola mundo desde programacion web components</h3>
+                <h4>Hola mundo desde programacion web components</h4>
+                <h5>Hola mundo desde programacion web components</h5>
+                <h5>Hola mundo desde programacion web components</h6>    
+                `
+            }
+        }
+
+        customElements.define("hola-mundo", HolaMundo);
+
+    </script>
+
+    <hola-mundo></hola-mundo>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        SALUDO A PERSONA CON VARIABLE
+    </title>
+</head>
+<body>
+    
+    <script>
+
+        class SaludarPersona extends HTMLElement{
+            constructor(){
+                super();
+                this.attachShadow({mode:'open'});
+            }
+            connectedCallback(){
+                let nombre = this.getAttribute("nombre")|| "SIN NOMBRE";
+                let edad = this.getAttribute("edad")|| "SIN EDAD";
+                console.log(nombre);
+                this.shadowRoot.innerHTML = `<p> ${nombre} y tengo ${edad} años </p>`;
+            }
+        }
+
+        // Definir el custom element con parametro
+        customElements.define("saludar-persona", SaludarPersona);
+    </script>
+
+    <saludar-persona nombre="MAURI TANDAZO" edad="28">
+    </saludar-persona>
+
+         <saludar-persona nombre="JUAN ARIAS" edad ="23"></saludar-persona>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+
+ <body class="p-4">
+
+  <div class="container">
+    <h3 class="mb-4 text-center">Listado de Personas</h3>
+    <table id="tabla-personas" class="table table-bordered table-hover">
+      <thead class="table-primary">
+        <tr>
+          <th>NOMBRES</th>
+          <th>APELLIDOS</th>
+          <th>EDAD</th>
+          <th>¿MAYOR DE EDAD?</th>
+          <th>GÉNERO</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Custom Elements -->
+  <saludar-persona nombres="MAURI ANDREY" apellidos="TANDAZO GUAJALA" edad="17" genero="MASCULINO"></saludar-persona>
+  <saludar-persona nombres="CHRISTIAN DILAN" apellidos="DONOSO CEVALLOS" edad="16" genero="MASCULINO"></saludar-persona>
+  <saludar-persona nombres="ABIGAIL MAYERLI" apellidos="ALOMOTO YUGSI" edad="18" genero="FEMENINO"></saludar-persona>
+  <saludar-persona nombres="ABIGAIL MAYERLI" apellidos="ALOMOTO YUGSI" edad="18" genero="FEMENINO"></saludar-persona>
+  <saludar-persona nombres="ABIGAIL MAYERLI" apellidos="ALOMOTO YUGSI" edad="18" genero="FEMENINO"></saludar-persona>
+  <saludar-persona nombres="ABIGAIL MAYERLI" apellidos="ALOMOTO YUGSI" edad="17" genero="MASCULINO"></saludar-persona>
+
+
+  <script src="./public/js/components/SaludarPersona.js"></script>
+
+
+</body>
+
+</html>
