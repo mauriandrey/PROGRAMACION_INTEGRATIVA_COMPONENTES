@@ -1,78 +1,175 @@
-Guía de proyectos — PROGRAMACION_INTEGRATIVA_COMPONENTES
+# UNIVERSIDAD DE LAS FUERZAS ARMADAS "ESPE"
+**Autor**: Mauri Tandazo 
+**Correo**: matandazo3@espe.edu.ec  
 
-Este repositorio contiene varios proyectos de ejemplo que muestran el uso de Web Components, Shadow DOM y ES Modules usando HTML/JS (sin framework).
 
-Cada carpeta de proyecto contiene un `index.html` y una estructura `public/` con sus recursos.
+# PROGRAMACIÓN INTEGRATIVA CON COMPONENTES
 
-## Resumen de proyectos
+## Descripción General
 
-- **PRY_CALCULADORA/**
-  - Descripción: Calculadora básica construida con Web Components y Shadow DOM. Los botones numéricos y de operación son componentes separados (`boton-numero`, `boton-operacion`) y se consumen mediante ES Modules.
-  - Archivos clave: `index.html`, `public/js/Calculadora.js`, `public/js/BotonNumero.js`, `public/js/BotonOperacion.js`, `public/js/main.js`.
-  - Cómo ejecutarlo: Debido al uso de ES Modules es recomendable servir los archivos por HTTP (no usar `file://`). Desde la carpeta raíz del repositorio puedes usar cualquiera de las opciones:
-    - VS Code: usar la extensión Live Server y abrir `PRY_CALCULADORA/index.html`.
-    - Python 3: abrir PowerShell y ejecutar desde la raíz del repositorio:
+Este repositorio contiene una colección de proyectos educativos que demuestran los conceptos fundamentales de **Web Components**, **Shadow DOM** y **ES Modules** en JavaScript puro, sin dependencias de frameworks externas.
 
-      ```powershell
-      cd 'c:\Users\HP\Documents\PROGRAMACION_INTEGRATIVA_COMPONENTES'
-      python -m http.server 8000
-      ```
-
-      Luego abrir en el navegador: http://localhost:8000/PRY_CALCULADORA/index.html
-
-    - Node (si tienes Node.js):
-
-      ```powershell
-      npx http-server -p 8080
-      ```
-
-      Luego abrir: http://localhost:8080/PRY_CALCULADORA/index.html
-
-  - Nota: `PRY_CALCULADORA/index.html` ya referencia `public/js/main.js` con `type="module"`. Si el proyecto no carga, asegúrate de usar un servidor HTTP.
-
-- **PRY_ES_MODULES/**
-  - Descripción: Ejemplos simples de ES Modules — importación y uso de módulos JavaScript para saludos y despedidas.
-  - Archivos clave: `index.html`, `public/js/saludo.js`, `public/js/SaludoPorNombre.js`, `public/js/SaludoPorClase.js`, `public/js/main.js`.
-  - Cómo ejecutarlo: Igual que arriba, servir por HTTP y abrir `PRY_ES_MODULES/index.html`.
-
-- **PRY_ESTRCUTURA/**
-  - Descripción: Ejemplos de captura de datos desde formularios y componentes en `public/js/components/`.
-  - Archivos clave: `index.html`, `captura_datos.html`, `public/js/components/CapturaDatosPersona.js`, `public/js/components/SaludarPersona.js`.
-  - Cómo ejecutarlo: Servir por HTTP y abrir `PRY_ESTRCUTURA/index.html` o `captura_datos.html` según lo que quieras probar.
-
-- **PRY_SALUDO_WEB-COMPONENT/**
-  - Descripción: Páginas de ejemplo que muestran el uso básico de web components sin Shadow DOM complejo; contiene ejemplos `index.html` y `saludar_persona.html`.
-  - Cómo ejecutarlo: Servir por HTTP y abrir los HTML dentro de la carpeta.
-
-- **PRY_SHADOW_DOM/**
-  - Descripción: Ejemplos centrados en Shadow DOM y encapsulación; incluye una pequeña demo de suma y una alerta usando componentes con shadow.
-  - Archivos clave: `index.html`, `suma_de_dos_numeros.html`, `public/js/SumasDosNumeros.js`, `public/js/AlertaSimple.js`.
-  - Cómo ejecutarlo: Servir por HTTP y abrir `PRY_SHADOW_DOM/index.html` o `suma_de_dos_numeros.html`.
-
-## Consejos generales y solución de problemas
-
-- **Uso de ES Modules:** cuando `index.html` incluye scripts con `type="module"`, el navegador cargará módulos vía HTTP(es). Por eso usar un servidor local evita problemas de importación o CORS.
-
-- **Si ves errores tipo "Failed to load module script" o rutas 404 en la consola del navegador:**
-  1. Verifica que el `src` del script en `index.html` esté con `type="module"` y la ruta correcta (`./public/js/main.js`).
-  2. Asegúrate de servir desde la carpeta raíz del repo o ajustar el server para que la URL corresponda (por ejemplo `http://localhost:8000/PRY_CALCULADORA/index.html`).
-
-- **Cambiar estilos:** Los componentes usan `bootstrap` desde `public/vendor/bootstrap`. No es necesario instalar dependencias externas.
-
-- **Probar rápidamente (comando recomendado desde PowerShell):**
-
-```powershell
-cd 'c:\Users\HP\Documents\PROGRAMACION_INTEGRATIVA_COMPONENTES'
-python -m http.server 8000
-# Abrir en el navegador: http://localhost:8000/PRY_CALCULADORA/index.html
-```
-
-## Pasos siguientes (opcional)
-
-- Puedo añadir un `README.md` específico dentro de cada subcarpeta con instrucciones de desarrollo y pruebas automáticas.
-- Puedo añadir una pequeña nota sobre las rutas relativas en los `import` si prefieres usar bundlers o deploy en GitHub Pages.
+Cada proyecto está diseñado como un ejemplo práctico independiente que puede ser explorado y ejecutado de manera sencilla. Todos los proyectos utilizan **HTML5**, **CSS3** y **JavaScript moderno** (ES6+).
 
 ---
 
-Última actualización: 2025-11-07
+##  Estructura del Repositorio
+
+```
+PROGRAMACION_INTEGRATIVA_COMPONENTES/
+├── README.md                          (Este archivo - Guía general)
+├── PRY_CALCULADORA/                   (Calculadora con Web Components)
+│   └── README.md                      (Guía específica del proyecto)
+├── PRY_ES_MODULES/                    (Módulos ES básicos)
+│   └── README.md                      (Guía específica del proyecto)
+├── PRY_ESTRCUTURA/                    (Estructura y componentes personalizados)
+│   └── README.md                      (Guía específica del proyecto)
+├── PRY_SALUDO_WEB-COMPONENT/          (Introducción a Web Components)
+│   └── README.md                      (Guía específica del proyecto)
+└── PRY_SHADOW_DOM/                    (Shadow DOM y encapsulación)
+    └── README.md                      (Guía específica del proyecto)
+```
+
+---
+
+##  Proyectos Incluidos
+
+| Proyecto | Objetivo | Tecnologías |
+|----------|----------|-------------|
+| **PRY_CALCULADORA** | Construir una calculadora funcional con componentes reutilizables | Web Components, Shadow DOM, ES Modules |
+| **PRY_ES_MODULES** | Aprender importación y exportación de módulos JavaScript | ES Modules, módulos simples |
+| **PRY_ESTRCUTURA** | Manejo de formularios y captura de datos con componentes | Componentes personalizados, formularios |
+| **PRY_SALUDO_WEB-COMPONENT** | Introducción a los Web Components básicos | Web Components, atributos personalizados |
+| **PRY_SHADOW_DOM** | Encapsulación de estilos y estructura con Shadow DOM | Shadow DOM, CSS encapsulado |
+
+Para detalles completos de cada proyecto, consulta el `README.md` dentro de cada carpeta.
+
+---
+
+## Requisitos Previos
+
+- **Navegador moderno**: Chrome, Firefox, Edge, Safari (todos soportan Web Components)
+- **Python 3** (recomendado) O **Node.js** para un servidor local
+- **Editor de código**: VS Code u otro editor de tu preferencia
+- **Extensión recomendada en VS Code**: Live Server (para servir archivos localmente)
+
+---
+
+## Cómo Ejecutar los Proyectos
+
+###  Opción 1: Usar Live Server (VS Code)
+
+1. Instala la extensión **Live Server** en VS Code
+2. Navega a la carpeta del proyecto deseado (ej: `PRY_CALCULADORA`)
+3. Abre el archivo `index.html`
+4. Haz clic derecho → "Open with Live Server"
+
+### Opción 2: Usar Python (Recomendado)
+
+Abre una terminal (PowerShell en Windows) desde la **raíz del repositorio** y ejecuta:
+
+```powershell
+python -m http.server 8000
+```
+
+Luego accede a los proyectos en tu navegador:
+- Calculadora: `http://localhost:8000/PRY_CALCULADORA/index.html`
+- ES Modules: `http://localhost:8000/PRY_ES_MODULES/index.html`
+- Estructura: `http://localhost:8000/PRY_ESTRCUTURA/index.html`
+- Saludo Web Component: `http://localhost:8000/PRY_SALUDO_WEB-COMPONENT/index.html`
+- Shadow DOM: `http://localhost:8000/PRY_SHADOW_DOM/index.html`
+
+###  Opción 3: Usar Node.js + http-server
+
+Si tienes Node.js instalado:
+
+```powershell
+npx http-server -p 8080
+```
+
+Luego accede a `http://localhost:8080/PRY_CALCULADORA/index.html` (u otro proyecto)
+
+---
+
+## Conceptos Clave Tratados
+
+### Web Components
+- Creación de elementos personalizados con `HTMLElement`
+- Definición de componentes con `customElements.define()`
+- Paso de datos mediante atributos
+
+### Shadow DOM
+- Encapsulación de estilos CSS
+- Aislamiento del DOM principal
+- Ventajas de la encapsulación
+
+### ES Modules
+- Importación y exportación de módulos (`import`, `export`)
+- Organización del código en módulos reutilizables
+- Dependencias entre módulos
+
+### Comunicación entre Componentes
+- Eventos personalizados (`CustomEvent`)
+- Paso de datos entre componentes padre e hijo
+- Propagación de eventos (`bubbles`, `composed`)
+
+---
+
+##  Solución de Problemas
+
+### Error: "Failed to load module script" o "CORS error"
+
+**Causa**: Los módulos ES requieren ser servidos por HTTP, no por `file://`
+
+**Solución**: 
+1. Asegúrate de usar un servidor local (Python, Node, o Live Server)
+2. Verifica que las rutas en los `<script>` sean relativas correctas
+
+### Los estilos no se aplican
+
+**Causa**: Las rutas a Bootstrap pueden ser incorrectas
+
+**Solución**:
+1. Verifica que `public/vendor/bootstrap/` exista en cada proyecto
+2. Comprueba que los `href` en los `<link>` sean relativos a la ubicación del HTML
+
+### El componente no responde a clics
+
+**Causa**: Los eventos pueden no estar siendo escuchados correctamente
+
+**Solución**:
+1. Abre la consola del navegador (F12) para ver mensajes de error
+2. Verifica que los eventos personalizados tengan `bubbles: true` y `composed: true`
+
+---
+
+##  Un poco mas para conocer...
+
+Estos proyectos fueron diseñados para enseñar conceptos modernos de JavaScript con enfoque práctico. Cada proyecto:
+
+- ✅ Es independiente y puede ejecutarse sin otros
+- ✅ Incluye comentarios explicativos en el código
+- ✅ Demuestra buenas prácticas de estructura
+- ✅ Progresa en dificultad (de básico a intermedio)
+
+Se recomienda trabajarlos en este orden:
+1. **PRY_SALUDO_WEB-COMPONENT** → Introducción a Web Components
+2. **PRY_ES_MODULES** → Entender módulos JavaScript
+3. **PRY_ESTRCUTURA** → Formularios y componentes más complejos
+4. **PRY_SHADOW_DOM** → Encapsulación avanzada
+5. **PRY_CALCULADORA** → Proyecto integrador
+
+---
+
+##  Licencia
+
+Este repositorio es de uso educativo. Siéntete libre de usar, modificar y distribuir estos ejemplos para propósitos académicos.
+
+---
+
+##  Información
+
+**Repositorio**: PROGRAMACION_INTEGRATIVA_COMPONENTES  
+**Rama**: main  
+**Última actualización**: 2025-11-10
 
